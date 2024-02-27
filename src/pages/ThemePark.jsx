@@ -5,11 +5,16 @@ import Room from '../components/Room'
 const ThemePark = () => {
   const [rooms, setRooms] = useState([])
 
-  useEffect(() => {
-    const getRooms = async () => {
-      // const response = // get information from the database
-      // setRooms(...)
+  const getRooms = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/rooms')
+      setRooms(response.data)
+      console.log(response)
+    } catch (error) {
+      console.log(error)
     }
+  }
+  useEffect(() => {
     getRooms()
   }, [])
 
