@@ -1,14 +1,42 @@
+@font-face {
+  font-family: 'Rostov';
+  src: url('../fonts/Rostov.ttf');
+}
+@font-face {
+  font-family: 'DevilCandle';
+  src: url('../fonts/DevilCandle.otf');
+}
+@font-face {
+  font-family: 'ScaryHalloweenFont';
+  src: url('../fonts/ScaryHalloweenFont.ttf');
+}
+
 body {
   background-color: rgb(53, 58, 57);
   margin: 0;
+  padding: 0;
   color: white;
+}
+
+.homePage {
+  /* background-image: url('https://www.cbc.ca/natureofthings/content/legacy/BeAfraid_HauntedHouse_1920.jpg'); */
+  /* background-image: url('https://wallpapers.com/images/hd/haunted-mansion-under-full-moon-k5bdstfd924y0cvn.jpg'); */
+  height: 90vh;
+  /* background-repeat: no-repeat; */
+  /* background-size: 100vw 90vh; */
+  background-position: 0px, -80px;
+  background-size: cover;
 }
 
 a {
   color: #eee;
   text-decoration: none;
   display: inline-block;
-  padding: 16px 30px;
+  margin: 0;
+  padding: 0;
+  /* padding: 16px 30px; */
+  font-size: 20px;
+  font-family: DevilCandle;
 }
 
 header {
@@ -16,7 +44,7 @@ header {
   background-color: #971212;
   justify-content: flex-end;
   align-items: center;
-  height: 50px;
+  height: 10vh;
 }
 
 header a:hover {
@@ -28,7 +56,12 @@ header a {
 }
 
 .headers {
+  margin-top: 20px;
+  margin-bottom: 0;
   text-align: center;
+  font-family: ScaryHalloweenFont;
+  font-size: 40px;
+  font-weight: 200;
 }
 
 img {
@@ -37,4 +70,59 @@ img {
 
 .imgLarge {
   width: 550px;
+}
+
+.roomHeader {
+  font-family: DevilCandle;
+  font-size: 20px;
+}
+
+.homePageHeader {
+  line-height: 60vh;
+  font-size: 66px;
+}
+
+.roomList {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-gap: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px, 20px;
+  margin-top: 30px;
+  gap: 30px;
+  text-align: center;
+}
+
+.roomListImg {
+  width: 400px;
+}
+
+.roomListDiv {
+  padding: 0;
+  /* margin: 0; */
+  /* margin: 15px; */
+}
+
+.roomDetails {
+  text-align: justify;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  gap: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+.black {
+  background-color: red;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
 }

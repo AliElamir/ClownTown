@@ -22,7 +22,7 @@ const ThemePark = () => {
     <>
       <div>
         <h1 className="headers">Our Rooms</h1>
-        <section className="container-grid">
+        <section className="roomList">
           {rooms.map((room) => (
             <Room key={room._id} rooms={room} />
           ))}
