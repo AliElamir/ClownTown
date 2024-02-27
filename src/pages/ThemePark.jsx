@@ -20,7 +20,7 @@ const ThemePark = () => {
 
   return (
     <>
-      <div>
+      <div className='themeParkImg'>
         <h1 className="headers">Our Rooms</h1>
         <section className="roomList">
           {rooms.map((room) => (

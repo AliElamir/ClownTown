@@ -21,7 +21,7 @@ const RoomDetail = () => {
   }, [id])
 
   return (
-    <div>
+    <div className="roomDetailImg">
       <h3 className="headers">{roomDetail.name}</h3>
       <div className="roomDetails">
         <img
@@ -32,8 +32,10 @@ const RoomDetail = () => {
         <p>{roomDetail.desc}</p>
       </div>
       <section className="center">
-        <button className='black'>
-          <Link to={`/room/book/${id}`}>Book</Link>
+        <button className="buttons">
+          <Link to={`/room/book/${id}`}>
+            <span className="black">Book Room</span>
+          </Link>
         </button>
       </section>
     </div>
