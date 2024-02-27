@@ -7,7 +7,7 @@ const Clown = () => {
   const getClowns = async () => {
     try {
       const response = await axios.get('http://localhost:3000/clowns')
-      setClowns(response)
+      setClowns(response.data)
       console.log(response)
     } catch (error) {
       console.log(error)
