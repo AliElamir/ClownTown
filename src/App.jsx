@@ -1,12 +1,22 @@
 import './App.css'
+import ThemePark from './pages/ThemePark'
+import Clown from './components/Clown'
+import Home from './pages/Home'
+import NavBar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
-        hello
+        <NavBar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/themepark" element={<ThemePark />} />
+            <Route path="/clowns" element={<Clown />} />
+          </Routes>
+        </main>
       </div>
     </>
   )

@@ -1,3 +1,31 @@
-body{
-  background-color: aquamarine;
+body {
+  background-color: rgb(53, 58, 57);
+  margin: 0;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 30px;
+}
+
+header {
+  display: flex;
+  background-color: #971212;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+}
+
+header a:hover {
+  background-color: red;
+}
+
+header a {
+  margin: 0 20px;
+}
+
+.headers {
+  text-align: center;
 }
