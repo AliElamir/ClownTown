@@ -7,7 +7,7 @@ const ThemePark = () => {
 
   const getRooms = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/rooms')
+      const response = await axios.get('https://clowntownbackend.fly.dev/rooms')
       setRooms(response.data)
       console.log(response)
     } catch (error) {
@@ -20,7 +20,7 @@ const ThemePark = () => {
 
   return (
     <>
-      <div className='themeParkImg'>
+      <div className="themeParkImg">
         <h1 className="headers">Our Rooms</h1>
         <section className="roomList">
           {rooms.map((room) => (

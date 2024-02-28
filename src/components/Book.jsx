@@ -13,8 +13,12 @@ const Book = () => {
 
   const getClowns = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/clowns")
-      const inside = await axios.get(`http://localhost:3000/rooms/${id}`)
+      const response = await axios.get(
+        'https://clowntownbackend.fly.dev/clowns'
+      )
+      const inside = await axios.get(
+        `https://clowntownbackend.fly.dev/rooms/${id}`
+      )
       setClowns(response.data)
       setInsideClowns(inside.data.clowns)
 
@@ -68,9 +72,12 @@ const Book = () => {
       bookedClowns.push(clown._id)
     })
     console.log(bookedClowns)
-    const response = await axios.put(`http://localhost:3000/rooms/${id}`, {
-      clowns: bookedClowns
-    })
+    const response = await axios.put(
+      `https://clowntownbackend.fly.dev/rooms/${id}`,
+      {
+        clowns: bookedClowns
+      }
+    )
     navigate('/thanks')
 
     console.log(response)
