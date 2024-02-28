@@ -13,7 +13,7 @@ const Book = () => {
 
   const getClowns = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/clowns')
+      const response = await axios.get("http://localhost:3000/clowns")
       const inside = await axios.get(`http://localhost:3000/rooms/${id}`)
       setClowns(response.data)
       setInsideClowns(inside.data.clowns)

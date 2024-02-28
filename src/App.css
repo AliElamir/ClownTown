@@ -1,22 +1,22 @@
 @font-face {
-  font-family: 'Rostov';
-  src: url('../fonts/Rostov.ttf');
+  font-family: "Rostov";
+  src: url("../fonts/Rostov.ttf");
 }
 @font-face {
-  font-family: 'DevilCandle';
-  src: url('../fonts/DevilCandle.otf');
+  font-family: "DevilCandle";
+  src: url("../fonts/DevilCandle.otf");
 }
 @font-face {
-  font-family: 'ScaryHalloweenFont';
-  src: url('../fonts/ScaryHalloweenFont.ttf');
+  font-family: "ScaryHalloweenFont";
+  src: url("../fonts/ScaryHalloweenFont.ttf");
 }
 @font-face {
-  font-family: 'WitchMagic';
-  src: url('../fonts/WitchMagic.ttf');
+  font-family: "WitchMagic";
+  src: url("../fonts/WitchMagic.ttf");
 }
 @font-face {
-  font-family: 'Frightmare';
-  src: url('../fonts/Frightmare.ttf');
+  font-family: "Frightmare";
+  src: url("../fonts/Frightmare.ttf");
 }
 
 body {
@@ -214,19 +214,19 @@ img {
 }
 
 p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   /* font-family: Frightmare; */
   font-size: 18px;
   line-height: 26px;
 }
 
 .themeParkImg {
-  background: url('https://www.vertigohome.us/cdn/shop/products/PHM-33-Black-Brick-SIM-LRNLXLWallpaperwww.vertigohome.us_900x.jpg?v=1616617591');
+  background: url("https://www.vertigohome.us/cdn/shop/products/PHM-33-Black-Brick-SIM-LRNLXLWallpaperwww.vertigohome.us_900x.jpg?v=1616617591");
   filter: contrast(1.1);
 }
 
 .roomDetailImg {
-  background: url('https://cdn.wallpapersafari.com/66/3/nsamor.jpg');
+  background: url("https://cdn.wallpapersafari.com/66/3/nsamor.jpg");
   background-position: center;
   height: 105vh;
   /* height: 90vh; */
@@ -305,23 +305,59 @@ p {
 
 /* .clownGrid button:hover {
   background-color: darkred;
-} */
-
-.bookHeaders {
-  font-size: 22px;
+}
+.clownDivImg {
+  /* padding: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* margin: 0px, 20px; */
+  margin-top: 25px;
+  /* gap: 30px; */
+  text-align: center;
+  
+}
+.clownImgTag {
+  width: 375px;
+  border: 5px grey solid;
+  border-radius: 50px;
+  /* margin-top: 0px; */
+}
+.clownNamee {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 200;
 }
 
+.addClownBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 5px 10px rgb(207, 0, 0);
+  /* margin-left: 285px; */
+}
+.deleteBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 5px 10px rgb(207, 0, 0);
+  margin-bottom: 15px;
+  padding: 5px;
+}
 .paddings {
   padding: 15px 10px;
   font-size: 14px;
   font-family: WitchMagic;
 }
-
-.clownGrid:hover {
-  border: 3px solid red;
+.margins{
+  margin-top: 20px;
 }
-
-.centers {
-  display: flex;
-  justify-content: center;
+.input{
+  border-radius: 10px;
+  margin:10px 10px ;
 }

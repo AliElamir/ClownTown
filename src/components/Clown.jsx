@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom"
 
 const Clown = () => {
   const [clowns, setClowns] = useState([])
 
   const getClowns = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/clowns')
+      const response = await axios.get("http://localhost:3000/clowns")
       setClowns(response.data)
       console.log(response)
     } catch (error) {
@@ -31,27 +31,33 @@ const Clown = () => {
       return [...prvClowns]
     })
   }
-
   return (
     <div>
       <h1 className="headers">Clowny clown</h1>
-      <section className="container-grid">
+      <section>
         {clowns.map((clown) => (
           <div key={clown._id}>
-            <h3>{clown.name}</h3>
-            <img src={clown.image} alt={clown.name} />
-            <button
-              onClick={() => {
-                deleteClown(clown._id)
-              }}
-            >
-              Delete
-            </button>
+            <div className="clownDivImg">
+              <img className="clownImgTag" src={clown.image} alt={clown.name} />
+            </div>
+            <h3 className="clownNamee">{clown.name}</h3>
+            <section className="center">
+              <button
+                className="buttons paddings"
+                onClick={() => {
+                  deleteClown(clown._id)
+                }}
+              >
+                Delete
+              </button>
+            </section>
           </div>
         ))}
       </section>
-      <section>
-        <Link to={`/form`}>add a clown</Link>
+      <section className="center">
+        <button className="buttons margins">
+          <Link to={`/form`}>add a clown</Link>
+        </button>
       </section>
     </div>
   )
