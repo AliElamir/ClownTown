@@ -21,20 +21,24 @@ const RoomDetail = () => {
   }, [id])
 
   return (
-    <>
-      <div>
-        hello sayed
-        <h3>{roomDetail.name}</h3>
+    <div className="roomDetailImg">
+      <h3 className="headers">{roomDetail.name}</h3>
+      <div className="roomDetails">
         <img
           className="imgLarge"
           src={roomDetail.image}
           alt={roomDetail.name}
         />
+        <p>{roomDetail.desc}</p>
       </div>
-      <button>
-        <Link to={`/room/book/${id}`}>Book</Link>
-      </button>
-    </>
+      <section className="center">
+        <button className="buttons">
+          <Link to={`/room/book/${id}`}>
+            <span className="black">Book Room</span>
+          </Link>
+        </button>
+      </section>
+    </div>
   )
 }
 
