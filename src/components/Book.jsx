@@ -19,7 +19,7 @@ const Book = () => {
       //   (clown).find(clown._id === insideClowns._id)
       // });
       setClowns(response.data)
-
+      console.log(insideClowns)
       console.log(response)
     } catch (error) {
       console.log(error)
