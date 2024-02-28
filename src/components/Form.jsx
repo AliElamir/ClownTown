@@ -33,14 +33,15 @@ const Form = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Clown Name: </label>
-        <input onChange={handleChange} id="name" type="text" />
-        <label htmlFor="image">Picture</label>
-        <input onChange={handleChange} id="image" type="text" />
+        <label htmlFor="name">Clown Name : </label>
+        <input className='input' onChange={handleChange} id="name" type="text" />
+        <label htmlFor="image">Picture :</label>
+        <input className='input' onChange={handleChange} id="image" type="text" />
         {/* <button onClick={handleClear} type="clear">
           Clear
         </button> */}
-        <button type="submit">Add the clown</button>
+        
+        <button className='buttons margins paddings' type="submit">Add the clown</button>
       </form>
     </>
   )
