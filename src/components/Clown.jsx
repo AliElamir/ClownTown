@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useState, useEffect } from "react"
+import axios from "axios"
 
 const Clown = () => {
   const [clowns, setClowns] = useState([])
 
   const getClowns = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/clowns')
-      setClowns(response)
+      const response = await axios.get("http://localhost:3000/clowns")
+      setClowns(response.data)
       console.log(response)
     } catch (error) {
       console.log(error)
