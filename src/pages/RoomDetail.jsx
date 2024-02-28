@@ -11,7 +11,9 @@ const RoomDetail = () => {
   const [roomDetail, setRoomDetail] = useState({})
 
   const getRoomDetail = async () => {
-    const response = await axios.get(`http://localhost:3000/rooms/${id}`)
+    const response = await axios.get(
+      `https://clowntownbackend.fly.dev/rooms/${id}`
+    )
     console.log(response.data)
     setRoomDetail(response.data)
   }

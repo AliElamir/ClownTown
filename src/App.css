@@ -1,22 +1,22 @@
 @font-face {
-  font-family: "Rostov";
-  src: url("../fonts/Rostov.ttf");
+  font-family: 'Rostov';
+  src: url('../fonts/Rostov.ttf');
 }
 @font-face {
-  font-family: "DevilCandle";
-  src: url("../fonts/DevilCandle.otf");
+  font-family: 'DevilCandle';
+  src: url('../fonts/DevilCandle.otf');
 }
 @font-face {
-  font-family: "ScaryHalloweenFont";
-  src: url("../fonts/ScaryHalloweenFont.ttf");
+  font-family: 'ScaryHalloweenFont';
+  src: url('../fonts/ScaryHalloweenFont.ttf');
 }
 @font-face {
-  font-family: "WitchMagic";
-  src: url("../fonts/WitchMagic.ttf");
+  font-family: 'WitchMagic';
+  src: url('../fonts/WitchMagic.ttf');
 }
 @font-face {
-  font-family: "Frightmare";
-  src: url("../fonts/Frightmare.ttf");
+  font-family: 'Frightmare';
+  src: url('../fonts/Frightmare.ttf');
 }
 
 body {
@@ -24,11 +24,11 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: "WitchMagic";
+  font-family: WitchMagic;
 }
 
 .homePage {
-  background-image: url("../public/homebg.jpeg");
+  background-image: url('../homebg.jpeg');
   height: 90vh;
   background-position: center;
   background-size: cover;
@@ -70,6 +70,7 @@ header a {
 
 header a:hover {
   background-color: rgb(226, 0, 0);
+  text-shadow: 1px 3px 30px white;
 }
 
 .headers {
@@ -105,6 +106,25 @@ img {
   width: 550px;
   border: black solid 5px;
   border-radius: 50px;
+  animation: glowup 8s infinite;
+}
+
+@keyframes glowup {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.4);
+  }
+  50% {
+    filter: brightness(0.6);
+  }
+  75% {
+    filter: brightness(1.4);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }
 
 .roomHeader {
@@ -146,24 +166,27 @@ img {
 .roomListImg:hover {
   border-color: black;
   box-shadow: 0 0 75px 10px rgb(201, 36, 36);
-  animation: flashy 2s infinite;
+  animation: flashy 4s infinite;
   filter: brightness(1.5);
 }
 
 @keyframes flashy {
   0% {
-    filter: brightness(1);
-  }
-  20% {
-    filter: brightness(2);
-  }
-  30% {
-    filter: brightness(3) contrast(2.5);
-  }
-  35% {
     filter: brightness(0.5);
   }
-  40% {
+  5% {
+    filter: brightness(2);
+  }
+  10% {
+    filter: brightness(3) contrast(2.5);
+  }
+  12% {
+    filter: brightness(0.5);
+  }
+  15% {
+    filter: brightness(2);
+  }
+  20% {
     filter: brightness(1.5) contrast(1.2);
   }
   100% {
@@ -191,21 +214,22 @@ img {
 }
 
 p {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* font-family: Frightmare; */
   font-size: 18px;
   line-height: 26px;
 }
 
 .themeParkImg {
-  background: url("https://www.vertigohome.us/cdn/shop/products/PHM-33-Black-Brick-SIM-LRNLXLWallpaperwww.vertigohome.us_900x.jpg?v=1616617591");
+  background: url('https://www.vertigohome.us/cdn/shop/products/PHM-33-Black-Brick-SIM-LRNLXLWallpaperwww.vertigohome.us_900x.jpg?v=1616617591');
   filter: contrast(1.1);
 }
 
 .roomDetailImg {
-  background: url("https://cdn.wallpapersafari.com/66/3/nsamor.jpg");
+  background: url('https://cdn.wallpapersafari.com/66/3/nsamor.jpg');
   background-position: center;
-  height: 90vh;
+  height: 105vh;
+  /* height: 90vh; */
 }
 
 /* .buttons {
@@ -255,9 +279,11 @@ p {
 
 .clownGrid {
   background-color: black;
-  border: 2px solid red;
+  border: 3px solid grey;
+  border-radius: 25px;
   padding: 10px;
   margin-bottom: 20px;
+  transition: border 0.5s ease;
 }
 
 .clownGrid img {
@@ -267,7 +293,7 @@ p {
   border-radius: 100px;
 }
 
-.clownGrid button {
+/* .clownGrid button {
   margin-top: 10px;
   padding: 5px 10px;
   background-color: red;
@@ -275,11 +301,12 @@ p {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
-.clownGrid button:hover {
+/* .clownGrid button:hover {
   background-color: darkred;
 }
+*/
 .clownDivImg {
   /* padding: 0; */
   display: flex;
@@ -290,7 +317,6 @@ p {
   margin-top: 25px;
   /* gap: 30px; */
   text-align: center;
-  
 }
 .clownImgTag {
   width: 375px;
@@ -328,10 +354,36 @@ p {
   font-size: 14px;
   font-family: WitchMagic;
 }
-.margins{
+.margins {
   margin-top: 20px;
 }
-.input{
+.input {
   border-radius: 10px;
-  margin:10px 10px ;
+  margin: 10px 10px;
+}
+
+.bookHeaders {
+  font-size: 22px;
+}
+
+.paddings {
+  padding: 15px 10px;
+  font-size: 14px;
+  font-family: WitchMagic;
+}
+
+.clownGrid:hover {
+  border: 3px solid red;
+}
+
+.centers {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  border-radius: 10px;
+  margin: 10px 10px;
+  padding: 10px;
+  border: black solid 3px;
 }

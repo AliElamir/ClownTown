@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
-import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Clown = () => {
   const [clowns, setClowns] = useState([])
 
   const getClowns = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/clowns")
+      const response = await axios.get(
+        'https://clowntownbackend.fly.dev/clowns'
+      )
       setClowns(response.data)
       console.log(response)
     } catch (error) {
@@ -19,11 +21,13 @@ const Clown = () => {
   }, [])
 
   const deleteClown = async (id) => {
-    const response = await axios.delete(`http://localhost:3000/clowns/${id}`)
+    const response = await axios.delete(
+      `https://clowntownbackend.fly.dev/clowns/${id}`
+    )
     console.log(response)
 
     setClowns((prvClowns) => {
-      let deleted = "e"
+      let deleted = 'e'
       const index = prvClowns.findIndex((clown) => clown._id === id)
       if (index > -1) {
         deleted = prvClowns.splice(index, 1)

@@ -7,6 +7,7 @@ import RoomDetail from './pages/RoomDetail'
 import Form from './components/Form'
 import Book from './components/Book'
 import { Route, Routes } from 'react-router-dom'
+import Thanks from './pages/thanks'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/rooms/:id" element={<RoomDetail />} />
             <Route path="/form" element={<Form />} />
             <Route path="/room/book/:id" element={<Book Clown />} />
+            <Route path="/thanks" element={<Thanks />} />
           </Routes>
         </main>
       </div>

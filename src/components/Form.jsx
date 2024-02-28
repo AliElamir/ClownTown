@@ -19,7 +19,10 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(obj)
-    const response = await axios.post('http://localhost:3000/clowns', obj)
+    const response = await axios.post(
+      'https://clowntownbackend.fly.dev/clowns',
+      obj
+    )
     console.log(response)
     navigate('/clowns')
     e.target.reset()
@@ -32,16 +35,28 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="center" onSubmit={handleSubmit}>
         <label htmlFor="name">Clown Name : </label>
-        <input className='input' onChange={handleChange} id="name" type="text" />
+        <input
+          className="input"
+          onChange={handleChange}
+          id="name"
+          type="text"
+        />
         <label htmlFor="image">Picture :</label>
-        <input className='input' onChange={handleChange} id="image" type="text" />
+        <input
+          className="input"
+          onChange={handleChange}
+          id="image"
+          type="text"
+        />
         {/* <button onClick={handleClear} type="clear">
           Clear
         </button> */}
-        
-        <button className='buttons margins paddings' type="submit">Add the clown</button>
+
+        <button className="buttons margins paddings" type="submit">
+          Add the clown
+        </button>
       </form>
     </>
   )
