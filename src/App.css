@@ -24,10 +24,11 @@ body {
   margin: 0;
   padding: 0;
   color: white;
+  font-family: WitchMagic;
 }
 
 .homePage {
-  background-image: url('../public/homebg.jpeg');
+  background-image: url('../homebg.jpeg');
   height: 90vh;
   background-position: center;
   background-size: cover;
@@ -69,6 +70,7 @@ header a {
 
 header a:hover {
   background-color: rgb(226, 0, 0);
+  text-shadow: 1px 3px 30px white;
 }
 
 .headers {
@@ -104,6 +106,25 @@ img {
   width: 550px;
   border: black solid 5px;
   border-radius: 50px;
+  animation: glowup 8s infinite;
+}
+
+@keyframes glowup {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.4);
+  }
+  50% {
+    filter: brightness(0.6);
+  }
+  75% {
+    filter: brightness(1.4);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }
 
 .roomHeader {
@@ -145,24 +166,27 @@ img {
 .roomListImg:hover {
   border-color: black;
   box-shadow: 0 0 75px 10px rgb(201, 36, 36);
-  animation: flashy 2s infinite;
+  animation: flashy 4s infinite;
   filter: brightness(1.5);
 }
 
 @keyframes flashy {
   0% {
-    filter: brightness(1);
-  }
-  20% {
-    filter: brightness(2);
-  }
-  30% {
-    filter: brightness(3) contrast(2.5);
-  }
-  35% {
     filter: brightness(0.5);
   }
-  40% {
+  5% {
+    filter: brightness(2);
+  }
+  10% {
+    filter: brightness(3) contrast(2.5);
+  }
+  12% {
+    filter: brightness(0.5);
+  }
+  15% {
+    filter: brightness(2);
+  }
+  20% {
     filter: brightness(1.5) contrast(1.2);
   }
   100% {
@@ -204,7 +228,8 @@ p {
 .roomDetailImg {
   background: url('https://cdn.wallpapersafari.com/66/3/nsamor.jpg');
   background-position: center;
-  height: 90vh;
+  height: 105vh;
+  /* height: 90vh; */
 }
 
 /* .buttons {
@@ -235,7 +260,7 @@ p {
   background-color: black;
   border: 4px solid red;
   box-shadow: 0px 5px 10px rgb(207, 0, 0);
-  color: black;
+  color: white;
   transform: translateY(-10px);
 }
 
@@ -254,9 +279,11 @@ p {
 
 .clownGrid {
   background-color: black;
-  border: 2px solid red;
+  border: 3px solid grey;
+  border-radius: 25px;
   padding: 10px;
   margin-bottom: 20px;
+  transition: border 0.5s ease;
 }
 
 .clownGrid img {
@@ -266,7 +293,7 @@ p {
   border-radius: 100px;
 }
 
-.clownGrid button {
+/* .clownGrid button {
   margin-top: 10px;
   padding: 5px 10px;
   background-color: red;
@@ -274,8 +301,27 @@ p {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+} */
+
+/* .clownGrid button:hover {
+  background-color: darkred;
+} */
+
+.bookHeaders {
+  font-size: 22px;
 }
 
-.clownGrid button:hover {
-  background-color: darkred;
+.paddings {
+  padding: 15px 10px;
+  font-size: 14px;
+  font-family: WitchMagic;
+}
+
+.clownGrid:hover {
+  border: 3px solid red;
+}
+
+.centers {
+  display: flex;
+  justify-content: center;
 }
