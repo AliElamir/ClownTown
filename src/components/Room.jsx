@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Room = ({ rooms }) => {
   return (
-    <Link to={`/rooms/${rooms.id}`}>
+    <Link to={`/rooms/${rooms._id}`}>
       <div>
         <h1 className="headers">Spooky Room</h1>
         <h2>{rooms.name}</h2>
