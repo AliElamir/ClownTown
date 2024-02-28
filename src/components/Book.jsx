@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { Link, useParams } from "react-router-dom"
 
 const Book = () => {
   const [clowns, setClowns] = useState([])
@@ -11,10 +11,10 @@ const Book = () => {
 
   const getClowns = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/clowns')
+      const response = await axios.get("http://localhost:3000/clowns")
       const inside = await axios.get(`http://localhost:3000/rooms/${id}`)
 
-      // setInsideClowns(inside.data)
+      setInsideClowns(inside.data)
       // clowns.map(clown => {//includes,find
       //   (clown).find(clown._id === insideClowns._id)
       // });
@@ -37,9 +37,8 @@ const Book = () => {
   const removeClown = (clown) => {
     // setInsideClowns((prevInsideClowns) => [...prevInsideClowns, clown])
   }
-  
+
   const clearAllClown = () => {
-    
     setInsideClowns([])
   }
 
@@ -61,6 +60,7 @@ const Book = () => {
               </button> */}
             </div>
           ))}
+
           <button
             onClick={() => {
               clearAllClown()
