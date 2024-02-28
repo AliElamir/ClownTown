@@ -20,7 +20,7 @@ function App() {
             <Route path="/clowns" element={<Clown />} />
             <Route path="/rooms/:id" element={<RoomDetail />} />
             <Route path="/form" element={<Form />} />
-            <Route path="/room/book/:id" element={<Book />} />
+            <Route path="/room/book/:id" element={<Book Clown />} />
           </Routes>
         </main>
       </div>

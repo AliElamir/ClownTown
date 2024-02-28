@@ -43,10 +43,10 @@ const Book = () => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="bookDiv themeParkImg">
+      <div className="insideBookDiv">
         <h3>inside the room </h3>
-        <section className="container-grid">
+        <section>
           {insideClowns.map((clown) => (
             <div key={clown._id}>
               <h3>{clown.name}</h3>
@@ -70,13 +70,13 @@ const Book = () => {
           </button>
         </section>
       </div>
-      <div>
-        <h3>outside the room </h3>
-        <section className="container-grid">
+      <div className="outsideBookDiv">
+        <h3>All Our Clowns</h3>
+        <section>
           {clowns.map((clown) => (
-            <div key={clown._id}>
-              <h3>{clown.name}</h3>
+            <div className="clownGrid" key={clown._id}>
               <img src={clown.image} alt={clown.name} />
+              <h3>{clown.name}</h3>
               <button
                 onClick={() => {
                   addClown(clown)

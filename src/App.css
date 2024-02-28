@@ -1,34 +1,99 @@
+@font-face {
+  font-family: 'Rostov';
+  src: url('../fonts/Rostov.ttf');
+}
+@font-face {
+  font-family: 'DevilCandle';
+  src: url('../fonts/DevilCandle.otf');
+}
+@font-face {
+  font-family: 'ScaryHalloweenFont';
+  src: url('../fonts/ScaryHalloweenFont.ttf');
+}
+@font-face {
+  font-family: 'WitchMagic';
+  src: url('../fonts/WitchMagic.ttf');
+}
+@font-face {
+  font-family: 'Frightmare';
+  src: url('../fonts/Frightmare.ttf');
+}
+
 body {
   background-color: rgb(53, 58, 57);
   margin: 0;
+  padding: 0;
   color: white;
 }
+
+.homePage {
+  background-image: url('../public/homebg.jpeg');
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  /* animation: spook 5s; */
+}
+
+/* @keyframes spook {
+  0% {
+    filter: blur(5);
+  }
+  100% {
+    filter: brightness(1.1);
+  }
+} */
 
 a {
   color: #eee;
   text-decoration: none;
   display: inline-block;
-  padding: 16px 30px;
+  margin: 0;
+  padding: 0;
+  padding: 16px;
+  font-size: 20px;
+  font-family: DevilCandle;
 }
 
 header {
   display: flex;
-  background-color: #971212;
   justify-content: flex-end;
   align-items: center;
-  height: 50px;
-}
-
-header a:hover {
-  background-color: red;
+  height: 10vh;
+  background: linear-gradient(to top, rgb(65, 0, 0), #a30000);
 }
 
 header a {
-  margin: 0 20px;
+  background-color: 971212;
+  transition: background-color 1s ease;
+}
+
+header a:hover {
+  background-color: rgb(226, 0, 0);
 }
 
 .headers {
+  line-height: 70px;
+  margin-top: 0px;
+  margin-bottom: 0;
   text-align: center;
+  font-family: ScaryHalloweenFont;
+  font-size: 40px;
+  font-weight: 200;
+  color: red;
+  animation: text 5s;
+  text-shadow: 0px 20px 28px red;
+  -webkit-text-stroke: 0.6px black; /* For WebKit browsers */
+}
+
+@keyframes text {
+  0% {
+    color: white;
+    text-shadow: none;
+  }
+  100% {
+    color: red;
+    text-shadow: 0px 20px 28px red;
+  }
 }
 
 img {
@@ -37,4 +102,180 @@ img {
 
 .imgLarge {
   width: 550px;
+  border: black solid 5px;
+  border-radius: 50px;
+}
+
+.roomHeader {
+  font-family: DevilCandle;
+  font-size: 24px;
+}
+
+.homePageHeader {
+  line-height: 85vh;
+  font-size: 78px;
+  margin: 0;
+}
+
+.roomList {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-gap: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px, 20px;
+  margin-top: 30px;
+  gap: 30px;
+  text-align: center;
+}
+
+.roomListImg {
+  width: 375px;
+  border: 5px grey solid;
+  border-radius: 50px;
+}
+.roomListDiv:hover .roomHeader {
+  color: red;
+  text-shadow: 0px 15px 10px red;
+}
+
+.roomListImg:hover {
+  border-color: black;
+  box-shadow: 0 0 75px 10px rgb(201, 36, 36);
+  animation: flashy 2s infinite;
+  filter: brightness(1.5);
+}
+
+@keyframes flashy {
+  0% {
+    filter: brightness(1);
+  }
+  20% {
+    filter: brightness(2);
+  }
+  30% {
+    filter: brightness(3) contrast(2.5);
+  }
+  35% {
+    filter: brightness(0.5);
+  }
+  40% {
+    filter: brightness(1.5) contrast(1.2);
+  }
+  100% {
+  }
+}
+
+.roomListDiv {
+  padding: 0;
+  /* margin: 0; */
+  /* margin: 15px; */
+}
+
+.roomDetails {
+  text-align: justify;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  margin-bottom: 10px;
+  gap: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: Frightmare; */
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.themeParkImg {
+  background: url('https://www.vertigohome.us/cdn/shop/products/PHM-33-Black-Brick-SIM-LRNLXLWallpaperwww.vertigohome.us_900x.jpg?v=1616617591');
+  filter: contrast(1.1);
+}
+
+.roomDetailImg {
+  background: url('https://cdn.wallpapersafari.com/66/3/nsamor.jpg');
+  background-position: center;
+  height: 90vh;
+}
+
+/* .buttons {
+  background-color: red;
+  padding: 0px 10px;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+} */
+
+.black {
+  color: white;
+}
+
+.buttons {
+  padding: 0px 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: red;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.7s ease 0s;
+  cursor: pointer;
+  border: 4px solid black;
+}
+
+.buttons:hover {
+  background-color: black;
+  border: 4px solid red;
+  box-shadow: 0px 5px 10px rgb(207, 0, 0);
+  color: black;
+  transform: translateY(-10px);
+}
+
+.bookDiv {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
+}
+
+.insideBookDiv,
+.outsideBookDiv {
+  width: 20%;
+}
+
+.clownGrid {
+  background-color: black;
+  border: 2px solid red;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.clownGrid img {
+  border: 3px grey solid;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+}
+
+.clownGrid button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clownGrid button:hover {
+  background-color: darkred;
 }

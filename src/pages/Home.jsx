@@ -1,7 +1,7 @@
-const Home = () =>{
+const Home = () => {
   return (
-    <div>
-      <h1 className="headers">Our Home Page</h1>
+    <div className="homePage">
+      <h1 className="headers homePageHeader">CLOWN TOWN</h1>
     </div>
   )
 }

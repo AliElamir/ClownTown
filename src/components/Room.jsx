@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 const Room = ({ rooms }) => {
   return (
     <Link to={`/rooms/${rooms._id}`}>
-      <div>
-        <h1 className="headers">Spooky Room</h1>
-        <h2>{rooms.name}</h2>
-        <img src={rooms.image} alt={rooms.name} />
+      <div className="roomListDiv">
+        <img className="roomListImg" src={rooms.image} alt={rooms.name} />
+        <h2 className="roomHeader">{rooms.name}</h2>
       </div>
     </Link>
   )
